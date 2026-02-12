@@ -1,0 +1,291 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "api-tests;products-api-returns-a-list",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Products API returns a list",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 873879425
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I request the product list from the API",
+            "match": {
+              "location": "tests/api/steps/api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 197495397
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the API should return products",
+            "match": {
+              "location": "tests/api/steps/api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4635648
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 54981950
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-tests;product-detail-api-returns-required-fields",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Product detail API returns required fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 345996139
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I request the first product details from the API",
+            "match": {
+              "location": "tests/api/steps/api.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 201986257
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the product details should include name and price",
+            "match": {
+              "location": "tests/api/steps/api.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1960411
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43082529
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-tests;login-api-returns-an-access-token",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Login API returns an access token",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 347522394
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I log in via the API with valid credentials",
+            "match": {
+              "location": "tests/api/steps/api.steps.ts:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 180712735
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the API should return an access token",
+            "match": {
+              "location": "tests/api/steps/api.steps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4973829
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 35134098
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-tests;invalid-login-is-rejected",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Invalid login is rejected",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 346919175
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I log in via the API with invalid credentials",
+            "match": {
+              "location": "tests/api/steps/api.steps.ts:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101846674
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the API should return an unauthorized error",
+            "match": {
+              "location": "tests/api/steps/api.steps.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 970123
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33630932
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-tests;ui-and-api-product-data-are-consistent",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "UI and API product data are consistent",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 350091445
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 914370451
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I compare the first UI product to the API",
+            "match": {
+              "location": "tests/api/steps/api.steps.ts:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125166258
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the product name and price should match",
+            "match": {
+              "location": "tests/api/steps/api.steps.ts:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1595067
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41388951
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "api-tests",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "API Tests",
+    "tags": [],
+    "uri": "tests/api/features/api.feature"
+  }
+]

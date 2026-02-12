@@ -1,0 +1,2343 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "add-product-to-cart;logged-in-user-can-add-a-product-to-cart",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Logged in user can add a product to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1489586984
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in as a customer",
+            "match": {
+              "location": "tests/steps/login.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1283167728
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 165006464
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I add the first product to the cart",
+            "match": {
+              "location": "tests/steps/add_to_cart.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 229372349
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the cart quantity should increase",
+            "match": {
+              "location": "tests/steps/add_to_cart.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10348450
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the cart should list the added product",
+            "match": {
+              "location": "tests/steps/add_to_cart.steps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 937097378
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 54124286
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-product-to-cart;out-of-stock-product-cannot-be-added-to-cart",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Out of stock product cannot be added to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 343936009
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am logged in as a customer",
+            "match": {
+              "location": "tests/steps/login.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 903054785
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160041337
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I open an out of stock product",
+            "match": {
+              "location": "tests/steps/view_product_details.steps.ts:14"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30008237656,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (/Users/user/Polaris/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:581:17)\n    at processTimers (node:internal/timers:519:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the add to cart button is disabled",
+            "match": {
+              "location": "tests/steps/view_product_details.steps.ts:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60908088
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "add-product-to-cart",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Add Product to Cart",
+    "tags": [],
+    "uri": "tests/features/add_to_cart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-001-homepage-product-card-issues",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "BUG-001 Homepage product card issues",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 404159660
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I capture bug \"BUG-001\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4132251626
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 56311584
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-002-logo-missing",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "BUG-002 Logo missing",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 357082834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I capture bug \"BUG-002\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5492063225,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/toolshop/i)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/toolshop/i)\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:58:49)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 45272364
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-003-eco-label-mismatch",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "BUG-003 ECO label mismatch",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 345915550
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I capture bug \"BUG-003\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4078854899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 61608539
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-004-search-no-results-message-missing",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "BUG-004 Search no-results message missing",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 360689035
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I capture bug \"BUG-004\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5634459094,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"no-results\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"no-results\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:64:62)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)\n    at runNextTicks (node:internal/process/task_queues:60:5)\n    at processImmediate (node:internal/timers:454:9)\n    at process.topLevelDomainCallback (node:domain:161:15)\n    at process.callbackTrampoline (node:internal/async_hooks:128:24)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 55334929
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-005-language-selector-missing",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "BUG-005 Language selector missing",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 344803536
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I capture bug \"BUG-005\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5479808233,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"language-select\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"language-select\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:67:67)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)\n    at runNextTicks (node:internal/process/task_queues:60:5)\n    at processImmediate (node:internal/timers:454:9)\n    at process.topLevelDomainCallback (node:domain:161:15)\n    at process.callbackTrampoline (node:internal/async_hooks:128:24)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 57421793
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-006-checkout-address-step-missing",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "BUG-006 Checkout address step missing",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 344568635
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I capture bug \"BUG-006\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5881916171,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"street\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"street\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:70:58)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 56435660
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-007-contact-spelling-error",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "BUG-007 Contact spelling error",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 341061458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I capture bug \"BUG-007\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5476330856,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"nav-contact\"]')\nExpected pattern: \u001b[32m/contact/i\u001b[39m\nReceived string:  \u001b[31m\"Contakt\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.have.text\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"nav-contact\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <a class=\"nav-link\" href=\"#/contact\" routerlink=\"/contact\" data-test=\"nav-contact\" _ngcontent-ng-c2781432996=\"\">Contakt</a>\u001b[22m\n\u001b[2m      - unexpected value \"Contakt\"\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:74:63)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 46749848
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-008-category-menu-undefined-label",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "BUG-008 Category menu undefined label",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 346558818
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I capture bug \"BUG-008\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5593701157,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('menuitem', { name: /undefined/i })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.have.count\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('menuitem', { name: /undefined/i })\u001b[22m\n\u001b[2m    8 × locator resolved to 1 element\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:77:72)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60307107
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-009-search-icon-missing",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "BUG-009 Search icon missing",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 342303517
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I capture bug \"BUG-009\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3746779876
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 55595670
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-010-login-modal-issues",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "BUG-010 Login modal issues",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 355709109
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I capture bug \"BUG-010\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3786922443
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60670285
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-011-forgot-password-placeholder",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "BUG-011 Forgot password placeholder",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 343284478
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 34,
+            "name": "I capture bug \"BUG-011\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5600384653,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"email\"]')\nExpected pattern: \u001b[32m/your email/i\u001b[39m\nReceived string:  \u001b[31m\"Your E-mail *\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.have.attribute.value\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"email\"]')\u001b[22m\n\u001b[2m    7 × locator resolved to <input value=\"\" id=\"email\" type=\"text\" tabindex=\"1\" data-test=\"email\" formcontrolname=\"email\" placeholder=\"Your E-mail *\" class=\"form-control ng-untouched ng-pristine ng-valid\"/>\u001b[22m\n\u001b[2m      - unexpected value \"Your E-mail *\"\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:87:57)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60408010
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-012-profile-page-issues",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "BUG-012 Profile page issues",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 347531589
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "I capture bug \"BUG-012\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5217508762,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"postal_code\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"postal_code\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:90:63)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 46000465
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-013-header-profile-name-missing",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "BUG-013 Header profile name missing",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 345651914
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I capture bug \"BUG-013\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5209730223,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"nav-menu\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"nav-menu\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:95:60)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 55332911
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-014-home-nav-misroutes",
+        "keyword": "Scenario",
+        "line": 42,
+        "name": "BUG-014 Home nav misroutes",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 342813521
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "I capture bug \"BUG-014\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5217834152,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/#?\\/$/\u001b[39m\nReceived string:  \u001b[31m\"https://with-bugs.practicesoftwaretesting.com/auth/login\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.have.url\" with timeout 5000ms\u001b[22m\n\u001b[2m    8 × unexpected value \"https://with-bugs.practicesoftwaretesting.com/auth/login\"\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:98:26)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 58685029
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-015-contact-modal-fields-missing",
+        "keyword": "Scenario",
+        "line": 45,
+        "name": "BUG-015 Contact modal fields missing",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 347967464
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 46,
+            "name": "I capture bug \"BUG-015\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5256420427,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('input[formcontrolname=\"first_name\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[formcontrolname=\"first_name\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:101:73)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43626130
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "bug-screenshots;bug-016-contact-attachment-info-wrong",
+        "keyword": "Scenario",
+        "line": 48,
+        "name": "BUG-016 Contact attachment info wrong",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 345850436
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 49,
+            "name": "I capture bug \"BUG-016\" screenshots on both sites",
+            "match": {
+              "location": "tests/steps/bug.steps.ts:172"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5219289138,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/only files with the txt extension/i)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/only files with the txt extension/i)\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at assertExpectedBug (/Users/user/Polaris/tests/steps/bug.steps.ts:106:74)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/bug.steps.ts:175:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 44880551
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "bug-screenshots",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Bug Screenshots",
+    "tags": [],
+    "uri": "tests/features/bug.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "category-filtering-and-reset;filter-persists-and-pagination-keeps-results",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Filter persists and pagination keeps results",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 346364688
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 957419669
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I filter by the first category",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 244861780
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the filtered results should match the selected category",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 274133400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the category filter should persist after refresh",
+            "match": {
+              "location": "tests/steps/category_filter_reset.steps.ts:7"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 316863366,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at /Users/user/Polaris/tests/steps/category_filter_reset.steps.ts:25:48\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/category_filter_reset.steps.ts:25:9)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "pagination should keep the category filter applied",
+            "match": {
+              "location": "tests/steps/category_filter_reset.steps.ts:28"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 46169279
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-filtering-and-reset;clear-filters-restores-the-full-list",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Clear filters restores the full list",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 354900548
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 915107354
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I remember the first product name",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7099369
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I filter by the first category",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 122709560
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I clear the category filter",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52329751
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see the original first product again",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:53"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 9903122,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m\"C\u001b[7mombination Pliers\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"C\u001b[7mlaw Hammer with Shock Reduction Grip\u001b[27m\"\u001b[39m\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/filter_by_category.steps.ts:60:24)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 63181207
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "category-filtering-and-reset",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Category Filtering and Reset",
+    "tags": [],
+    "uri": "tests/features/category_filter_reset.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "complete-checkout;user-completes-checkout-with-valid-details",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User completes checkout with valid details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 340246704
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in as a customer",
+            "match": {
+              "location": "tests/steps/login.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 918997891
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I have a product in my cart",
+            "match": {
+              "location": "tests/steps/update_remove_cart.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1291669994
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I complete checkout with valid address and payment",
+            "match": {
+              "location": "tests/steps/checkout.steps.ts:56"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 15079617486,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"street\"]')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"street\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/checkout.steps.ts:95:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see an order confirmation",
+            "match": {
+              "location": "tests/steps/checkout.steps.ts:105"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 57939999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "complete-checkout;payment-step-requires-required-fields",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Payment step requires required fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 360372582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I am logged in as a customer",
+            "match": {
+              "location": "tests/steps/login.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 924794657
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I have a product in my cart",
+            "match": {
+              "location": "tests/steps/update_remove_cart.steps.ts:14"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30001299824,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (/Users/user/Polaris/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:581:17)\n    at processTimers (node:internal/timers:519:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I proceed to the payment step",
+            "match": {
+              "location": "tests/steps/checkout.steps.ts:9"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the finish button should be disabled",
+            "match": {
+              "location": "tests/steps/checkout.steps.ts:130"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 49270879
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "complete-checkout",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Complete Checkout",
+    "tags": [],
+    "uri": "tests/features/checkout.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "filter-products-by-category;selecting-a-category-updates-the-product-list",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Selecting a category updates the product list",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 395825193
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1014134140
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I remember the first product name",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7029318
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I filter by the first category",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119722787
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the filtered results should match the selected category",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117628338
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41106818
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "filter-products-by-category;clearing-the-category-filter-restores-products",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Clearing the category filter restores products",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 348684218
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 957958303
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I remember the first product name",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7298623
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I filter by the first category",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107192430
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I clear the category filter",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60056710
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see the original first product again",
+            "match": {
+              "location": "tests/steps/filter_by_category.steps.ts:53"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 7125830,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m\"C\u001b[7mombination Pliers\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"C\u001b[7mlaw Hammer with Shock Reduction Grip\u001b[27m\"\u001b[39m\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/filter_by_category.steps.ts:60:24)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65530357
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "filter-products-by-category",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Filter Products by Category",
+    "tags": [],
+    "uri": "tests/features/filter_by_category.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;valid-credentials-allow-login",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Valid credentials allow login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 341376441
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the login page",
+            "match": {
+              "location": "tests/steps/login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 513621077
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I log in with valid credentials",
+            "match": {
+              "location": "tests/steps/login.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 423168573
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see my account page",
+            "match": {
+              "location": "tests/steps/login.steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 359887491
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 120728289
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;invalid-credentials-show-an-error",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Invalid credentials show an error",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 339105716
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on the login page",
+            "match": {
+              "location": "tests/steps/login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 522084270
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I log in with invalid credentials",
+            "match": {
+              "location": "tests/steps/login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 424124707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see a login error message",
+            "match": {
+              "location": "tests/steps/login.steps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107142017
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 39234825
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "tests/features/login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "view-order-history;logged-in-user-can-view-order-history-and-details",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Logged in user can view order history and details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 349768769
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in as a customer",
+            "match": {
+              "location": "tests/steps/login.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 919344454
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I open my order history",
+            "match": {
+              "location": "tests/steps/order_history.steps.ts:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 16660604431,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"street\"]')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"street\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/order_history.steps.ts:65:26)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see a list of orders",
+            "match": {
+              "location": "tests/steps/order_history.steps.ts:85"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I can open the first order details",
+            "match": {
+              "location": "tests/steps/order_history.steps.ts:96"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 57782189
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "view-order-history;order-history-requires-login",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Order history requires login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 357677785
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I open order history directly",
+            "match": {
+              "location": "tests/steps/order_history.steps.ts:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 859644943
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should be prompted to log in",
+            "match": {
+              "location": "tests/steps/order_history.steps.ts:111"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5002377645,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"email\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"email\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at LoginPage.expectOnLogin (/Users/user/Polaris/tests/pages/LoginPage.ts:44:32)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/order_history.steps.ts:114:19)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47328938
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "view-order-history",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "View Order History",
+    "tags": [],
+    "uri": "tests/features/order_history.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "search-for-a-product;search-returns-matching-products",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Search returns matching products",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 346124181
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 895023476
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for the first product name",
+            "match": {
+              "location": "tests/steps/search_product.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 238045006
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see search results for that product",
+            "match": {
+              "location": "tests/steps/search_product.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13657754
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 73762493
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "search-for-a-product;search-with-no-matches-shows-message",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Search with no matches shows message",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 356431634
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1115355460
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I search for \"no-such-product-xyz\"",
+            "match": {
+              "location": "tests/steps/search_product.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 225731996
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see a no results message",
+            "match": {
+              "location": "tests/steps/search_product.steps.ts:31"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5001611828,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-test=\"no-results\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-test=\"no-results\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/search_product.steps.ts:33:58)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 134689596
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "search-for-a-product",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Search for a Product",
+    "tags": [],
+    "uri": "tests/features/search_product.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "update-or-remove-from-cart;updating-quantity-updates-totals",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Updating quantity updates totals",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 342600576
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in as a customer",
+            "match": {
+              "location": "tests/steps/login.steps.ts:8"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 15832141715,
+              "error_message": "page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"email\"]') to be visible\u001b[22m\n\n    at LoginPage.goto (/Users/user/Polaris/tests/pages/LoginPage.ts:17:21)\n    at async CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/login.steps.ts:11:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I have a product in my cart",
+            "match": {
+              "location": "tests/steps/update_remove_cart.steps.ts:14"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I increase the cart quantity to 2",
+            "match": {
+              "location": "tests/steps/update_remove_cart.steps.ts:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the cart line total should update",
+            "match": {
+              "location": "tests/steps/update_remove_cart.steps.ts:42"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 57967508
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-or-remove-from-cart;removing-an-item-empties-the-cart",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Removing an item empties the cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 341401509
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I am logged in as a customer",
+            "match": {
+              "location": "tests/steps/login.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 916439024
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I have a product in my cart",
+            "match": {
+              "location": "tests/steps/update_remove_cart.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1545583962
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I remove the product from the cart",
+            "match": {
+              "location": "tests/steps/update_remove_cart.steps.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29554269
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the cart should be empty",
+            "match": {
+              "location": "tests/steps/update_remove_cart.steps.ts:59"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5003023873,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('p').filter({ hasText: /cart.*empty/i })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p').filter({ hasText: /cart.*empty/i })\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/update_remove_cart.steps.ts:62:41)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 53648309
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "update-or-remove-from-cart",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Update or Remove from Cart",
+    "tags": [],
+    "uri": "tests/features/update_remove_cart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "view-product-details;product-details-show-name,-description,-price,-image,-and-add-to-cart",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Product details show name, description, price, image, and add to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 350708001
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 944855926
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I open the first product",
+            "match": {
+              "location": "tests/steps/view_product_details.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 122663171
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I see product details with name description price and image",
+            "match": {
+              "location": "tests/steps/view_product_details.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116601914
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the add to cart button is enabled",
+            "match": {
+              "location": "tests/steps/view_product_details.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9313200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41441301
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "view-product-details;out-of-stock-product-cannot-be-added-to-cart",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Out of stock product cannot be added to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 345195504
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 953641499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I open an out of stock product",
+            "match": {
+              "location": "tests/steps/view_product_details.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116852416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the add to cart button is disabled",
+            "match": {
+              "location": "tests/steps/view_product_details.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106426624
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 70214034
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "view-product-details",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "View Product Details",
+    "tags": [],
+    "uri": "tests/features/view_product_details.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "view-product-list;products-display-with-names,-images,-prices,-and-links",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Products display with names, images, prices, and links",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 349722277
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 998249973
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I see products with names, images, prices, and links",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78031409
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 38145340
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "view-product-list;pagination-works-for-product-list",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Pagination works for product list",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 348531652
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 918708749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I navigate to the next product page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:44"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5008272330,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.pagination a[aria-label=\"Next\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.pagination a[aria-label=\"Next\"]')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/user/Polaris/node_modules/playwright/lib/matchers/expect.js:213:24)\n    at ProductListPage.goToNextPage (/Users/user/Polaris/tests/pages/ProductListPage.ts:123:24)\n    at CustomWorld.<anonymous> (/Users/user/Polaris/tests/steps/view_product_list.steps.ts:51:18)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see a different set of products",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:54"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 51397976
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "view-product-list;previous-pagination-is-disabled-on-first-page",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Previous pagination is disabled on first page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 346521177
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open the tool shop page",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 926551814
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the previous pagination control is disabled",
+            "match": {
+              "location": "tests/steps/view_product_list.steps.ts:66"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30000739012,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (/Users/user/Polaris/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:581:17)\n    at processTimers (node:internal/timers:519:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 61433447
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "view-product-list",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "View Product List",
+    "tags": [],
+    "uri": "tests/features/view_product_list.feature"
+  }
+]

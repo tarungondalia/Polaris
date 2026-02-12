@@ -1,0 +1,40 @@
+{
+  "name": "polaris",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest:cucumber": "node scripts/require-node-20.js",
+    "pretest:cucumber:main": "node scripts/require-node-20.js",
+    "pretest:cucumber:buggy": "node scripts/require-node-20.js",
+    "pretest:cucumber:ui": "node scripts/require-node-20.js",
+    "pretest:cucumber:api": "node scripts/require-node-20.js",
+    "pretest:cucumber:ui_api": "node scripts/require-node-20.js",
+    "pretest:cucumber:report": "node scripts/require-node-20.js",
+    "pretest:cucumber:bug:report": "node scripts/require-node-20.js",
+    "pretest:cucumber:api:report": "node scripts/require-node-20.js",
+    "test:cucumber": "cucumber-js",
+    "test:cucumber:main": "BASE_URL=https://practicesoftwaretesting.com cucumber-js",
+    "test:cucumber:buggy": "BASE_URL=https://with-bugs.practicesoftwaretesting.com cucumber-js",
+    "test:cucumber:ui": "cucumber-js",
+    "test:cucumber:api": "cucumber-js -p api",
+    "test:cucumber:ui_api": "cucumber-js \"tests/api/features/api.feature\" --format progress --require 'tests/steps/step_definitions/**/*.js'",
+    "test:cucumber:report": "cucumber-js \"tests/features/*.feature\" --format progress --format json:reports/cucumber.json --require 'tests/steps/step_definitions/**/*.js'; node -e \"require('cucumber-html-reporter').generate({theme:'bootstrap',jsonFile:'reports/cucumber.json',output:'reports/cucumber.html',launchReport:false})\"",
+    "test:cucumber:bug:report": "cucumber-js \"tests/features/bug.feature\" --format progress --format json:reports/bugs-only.json --require 'tests/steps/step_definitions/**/*.js'; node -e \"require('cucumber-html-reporter').generate({theme:'bootstrap',jsonFile:'reports/bugs-only.json',output:'reports/bugs-only.html',launchReport:false})\"",
+    "test:cucumber:api:report": "cucumber-js -p api --format progress --format json:reports/cucumber-api.json; node -e \"require('cucumber-html-reporter').generate({theme:'bootstrap',jsonFile:'reports/cucumber-api.json',output:'reports/cucumber-api.html',launchReport:false})\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.2",
+    "@cucumber/cucumber": "^11.3.0",
+    "cucumber-html-reporter": "^7.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
